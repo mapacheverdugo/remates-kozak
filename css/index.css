@@ -1,0 +1,51 @@
+main {
+  padding: 50px 0;
+  background: #eee;
+}
+
+main .productos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .filtro {
+  margin: auto;
+  margin-bottom: 20px;
+  display: inline-flex;
+  border-bottom: 2px solid #7CB342;
+}
+
+main .filtro input {
+  display: none;
+}
+
+main .filtro label {
+  display: block;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+main .filtro label:hover {
+  color: #7CB342;
+}
+
+main .filtro input:checked + label {
+  background: #7CB342;
+}
+
+main .filtro input:checked + label:hover {
+  color: #000;
+}
+
+main .productos .producto {
+  background-color: #fff;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
