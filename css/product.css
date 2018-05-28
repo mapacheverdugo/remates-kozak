@@ -9,15 +9,16 @@ main .container {
   margin-top: 30px;
 }
 
-main .producto {
+main .item {
   background: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  margin: 20px 0;
 }
 
-main .producto .fotos {
+main .item .fotos {
   width: 50%;
   padding: 20px;
   display: flex;
@@ -26,16 +27,35 @@ main .producto .fotos {
   align-items: center;
 }
 
-main .producto .fotos .main img {
+main .item .fotos .main img {
   width: 100%;
 }
 
-main .producto img {
+main .item img {
   width: 100px;
   height: auto;
 }
 
-main .producto .info {
+main .item .info {
   padding: 20px;
   width: 50%;
+}
+
+main .productos-similares {
+  background: #fff;
+  padding: 20px;
+}
+
+main .productos-similares h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+main .productos-similares .producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bdbdbd;
+  height: 300px;
 }

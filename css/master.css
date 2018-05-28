@@ -5,6 +5,7 @@ Primary style
 -------------------------------- */
 *, *::after, *::before {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 html {
@@ -31,8 +32,7 @@ a {
 
 -------------------------------- */
 .auto-hide-header {
-  position: fixed;
-  z-index: 2;
+  z-index: 101;
   top: 0;
   left: 0;
   width: 100%;

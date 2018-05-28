@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/hover.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <style media="screen">
+
+    main {
+      background: #eee;
+      padding: 20px 0;
+    }
+
+    main .container {
+       max-width: 1200px;
+       margin: auto;
+    }
+
+    main .principal {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: flex-start;
+
+    }
+
+    main .principal .filtros {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      min-width: 300px;
+      min-width: 40%;
+      flex-basis: auto;
+      margin-right: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      main .principal .filtros {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      main .principal {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media only screen and (min-width: 900px) {
+      main .principal .filtros {
+        min-width: 30%;
+        flex-basis: auto;
+      }
+      main .principal .lista-productos {
+        min-width: 70%;
+        flex-basis: auto;
+      }
+    }
+
+    @media only screen and (min-width: 900px) {
+      main .principal .filtros {
+        min-width: 20%;
+        flex-basis: auto;
+      }
+      main .principal .lista-productos {
+        min-width: 80%;
+        flex-basis: auto;
+      }
+    }
+
+    main .principal .filtros .content {
+      background: #fafafa;
+      width: 100%;
+      height: 500px;
+    }
+
+    @media only screen and (min-width: 1028px) {
+      main .principal .filtros {
+        display: block;
+        background: #fff;
+        padding: 20px;
+        min-width: 300px;
+        min-width: 30%;
+        flex-basis: auto;
+        margin-right: 20px;
+      }
+    }
+
+    main .principal .lista-productos {
+      overflow: hidden;
+      min-width: 60%;
+      flex-basis: auto;
+      margin-right: -20px;
+    }
+
+    main .principal .lista-productos ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-right: -20px;
+      margin-bottom: -20px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    main .principal .lista-productos ul li {
+      display: inline-block;
+      min-width: calc(100% / 4);
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    main .principal .lista-productos ul li .producto {
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    main .principal .lista-productos ul li .producto a {
+      text-decoration: none;
+      color: #212121;
+    }
+
+    main .principal .lista-productos ul li .producto a:hover {
+      text-decoration: underline;
+    }
+
+    main .principal .lista-productos ul li .producto .foto {
+      width: 100%;
+      height: 200px;
+      background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s--eF3mI-fo--/c_scale,f_auto,fl_progressive,q_80,w_800/myw07z6aousnse5kbjvy.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: none;
+    }
+
+    main .principal .lista-productos ul li .producto .informacion {
+      padding: 20px;
+    }
+
+    main .principal .lista-productos ul li .producto .marca {
+      display: block;
+      padding: 10px 0;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: bold;
+      color: #444;
+    }
+
+  </style>
+
+  <title>Automoviles | Remates Kozak</title>
+</head>
+<body>
+  <header id="header">
+    <nav class="top-nav">
+      <div class="container">
+        <ul class="contacto">
+          <li><a href="#footer"><i class="fas fa-map-marker-alt"></i><span>Av. Cordillera 181, Quilicura, Santiago</span></a></li>
+          <li><a href="tel:+56227392900"><i class="fas fa-phone"></i><span>(+56) 2 2739 2900</span></a></li>
+          <li><a href="mailto:info@remateskozak.cl"><i class="fas fa-at"></i><span>info@remateskozak.cl</span></a></li>
+        </ul>
+        <ul class="redes-sociales">
+          <li><a href="https://web.facebook.com/remateskzk/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/remateskozak" class="twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/remateskozak/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
+        </ul>
+      </div>
+    </nav> <!-- .top-nav -->
+
+    <div class="container">
+    	<nav class="main-nav">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+    		<a href="#navigation" class="nav-trigger">
+    			<span>
+    				<em aria-hidden="true"></em>
+    				Menú
+    			</span>
+    		</a> <!-- .nav-trigger -->
+
+    		<ul class="navigation">
+    			<li><a href="index.html">Inicio</a></li>
+    			<li><a href="#">Noticias</a></li>
+    			<li><a href="#">Remates online</a></li>
+    			<li><a href="#">Venta directa</a></li>
+    			<li><a href="#">Contacto</a></li>
+          <li><a href="#"><i class="fas fa-search"></i></a></li>
+    		</ul>
+  	  </nav> <!-- .main-nav -->
+
+      <nav class="secondary-nav">
+      	<ul>
+      		<li><a class="active" href="#">Vehículos</a></li>
+      		<li><a href="#">Inmuebles</a></li>
+      		<li><a href="#">Maquinaria</a></li>
+      		<li><a href="#">Equipos</a></li>
+      		<li><a href="#">Electrodomésticos</a></li>
+      	</ul>
+      </nav> <!-- .secondary-nav -->
+    </div>
+
+  </header> <!-- #header -->
+
+  <main>
+    <div class="container">
+      <div class="principal">
+        <aside class="filtros">
+          <form>
+            <fieldset>
+              <legend>Categoria:</legend>
+              <label>
+                <input type="checkbox" name="categoria">
+                Categorias
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                Automoviles
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                Motobombas
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                Inmuebles
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                Bicicletas
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                Electrodomésticos
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>Precio</legend>
+              <label>
+                <input type="checkbox" name="categoria">
+                0 - $10.000
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                +$10.000 - $50.000
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                +$50.000 - $100.000
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                +$100.000 - $500.000
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                +$500.000 - $1.000.000
+              </label>
+              <label>
+                <input type="checkbox" name="categoria">
+                > $1.000.000
+              </label>
+            </fieldset>
+          </form>
+        </aside>
+        <section class="lista-productos">
+          <ul>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="producto">
+                <a href="product.html"><div class="foto hvr-grow"></div></a>
+                <div class="informacion">
+                  <a href="#" class="marca">Mazda</span>
+                  <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="container main">
+      <nav class="navegacion">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Noticias</a></li>
+          <li><a href="#">Remates online</a></li>
+          <li><a href="#">Venta directa</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav class="categorias">
+        <ul>
+          <li class="title">Categorias</li>
+          <li><a href="#">Automoviles</a></li>
+          <li><a href="#">Motobombas</a></li>
+          <li><a href="#">Inmuebles</a></li>
+          <li><a href="#">Bicicletas</a></li>
+          <li><a href="#">Electrodomésticos</a></li>
+        </ul>
+      </nav>
+      <nav class="contacto">
+        <ul>
+          <li class="title">Contacto</li>
+          <li><a href="#">Av. Cordillera 181, Quilicura, Santiago</a></li>
+          <li><a href="tel:+56227392900">(+56) 2 2739 2900</a></li>
+          <li><a href="mailto:info@remateskozak.cl">info@remateskozak.cl</a></li>
+        </ul>
+      </nav>
+      <nav class="redes-sociales">
+        <ul>
+          <li><a href="https://web.facebook.com/remateskzk/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/remateskozak" class="twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/remateskozak/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
+        </ul>
+      </nav>
+    </div> <!-- container -->
+    <div class="bottom-bar">
+      <div class="container">
+        <span>&copy Todos los derechos reservados</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+  <script src="js/owl.carousel.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var mainHeader = $('#header');
+    mainHeader.on('click', '.nav-trigger', function(event){
+      // open primary navigation on mobile
+      event.preventDefault();
+      mainHeader.toggleClass('nav-open');
+    });
+  </script>
+</body>
+</html>

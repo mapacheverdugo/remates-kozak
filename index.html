@@ -1,8 +1,8 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="https://fonts.googleapis.com/css?family=David+Libre|Hind:400,700" rel="stylesheet">
 
@@ -11,52 +11,63 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/master.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/index.css">
 
 	<title>Inicio | Remates Kozak</title>
 </head>
 <body>
-<header class="auto-hide-header">
-	<div class="logo"><a href="#0"><img src="img/logo.png" alt="Logo"></a></div>
+	<header id="header">
+		<nav class="top-nav">
+			<div class="container">
+				<ul class="contacto">
+					<li><a href="#footer"><i class="fas fa-map-marker-alt"></i><span>Av. Cordillera 181, Quilicura, Santiago</span></a></li>
+					<li><a href="tel:+56227392900"><i class="fas fa-phone"></i><span>(+56) 2 2739 2900</span></a></li>
+					<li><a href="mailto:info@remateskozak.cl"><i class="fas fa-at"></i><span>info@remateskozak.cl</span></a></li>
+				</ul>
+				<ul class="redes-sociales">
+					<li><a href="https://web.facebook.com/remateskzk/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://twitter.com/remateskozak" class="twitter"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="https://www.instagram.com/remateskozak/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
+				</ul>
+			</div>
+		</nav> <!-- .top-nav -->
 
-	<nav class="primary-nav">
-		<a href="#navigation" class="nav-trigger">
-			<span>
-				<em aria-hidden="true"></em>
-				Menú
-			</span>
-		</a> <!-- .nav-trigger -->
+		<div class="container">
+			<nav class="main-nav">
+				<div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+				<a href="#navigation" class="nav-trigger">
+					<span>
+						<em aria-hidden="true"></em>
+						Menú
+					</span>
+				</a> <!-- .nav-trigger -->
 
-		<ul class="navigation">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Noticias</a></li>
-			<li><a href="#">Remates online</a></li>
-			<li><a href="#">Venta directa</a></li>
-			<li><a href="#">Contacto</a></li>
-			<li><a href="#"><i class="fas fa-search"></i></a></li>
-		</ul>
-	</nav> <!-- .primary-nav -->
+				<ul class="navigation">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="#">Noticias</a></li>
+					<li><a href="#">Remates online</a></li>
+					<li><a href="#">Venta directa</a></li>
+					<li><a href="#">Contacto</a></li>
+					<li><a href="#"><i class="fas fa-search"></i></a></li>
+				</ul>
+			</nav> <!-- .main-nav -->
 
-</header> <!-- .auto-hide-header -->
+			<nav class="secondary-nav">
+				<ul>
+					<li><a class="active" href="#">Vehículos</a></li>
+					<li><a href="#">Inmuebles</a></li>
+					<li><a href="#">Maquinaria</a></li>
+					<li><a href="#">Equipos</a></li>
+					<li><a href="#">Electrodomésticos</a></li>
+				</ul>
+			</nav> <!-- .secondary-nav -->
+		</div>
 
-<section class="hero">
-	<div class="hero-content">
-		<!-- your content here -->
-	</div>
-</section> <!-- .hero -->
+	</header> <!-- #header -->
 
-<nav class="secondary-nav">
-	<ul>
-		<li><a class="active" href="#">Vehículos</a></li>
-		<li><a href="#">Inmuebles</a></li>
-		<li><a href="#">Maquinaria</a></li>
-		<li><a href="#">Equipos</a></li>
-		<li><a href="#">Electrodomésticos</a></li>
-	</ul>
-</nav> <!-- .secondary-nav -->
-
-<main class="main-content sub-nav-hero">
+<main>
 	<section class="productos">
 		<form class="filtro">
 			<input type="radio" name="filtro" value="automoviles" id="filtro1">
@@ -105,7 +116,7 @@
 </main> <!-- .main-content -->
 
 <footer id="footer">
-	<div class="container">
+	<div class="container main">
 		<nav class="navegacion">
 			<ul>
 				<li><a href="#">Inicio</a></li>
@@ -141,7 +152,14 @@
 				<li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
 			</ul>
 		</nav>
+	</div> <!-- container -->
+	<div class="bottom-bar">
+		<div class="container">
+			<span>&copy Todos los derechos reservados</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
 	</div>
+
 </footer>
 
 <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>

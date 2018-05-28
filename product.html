@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/product.css">
 
   <title>Producto XS23 | Automoviles en Remates Kozak</title>
 </head>
 <body>
-  <header class="auto-hide-header">
-    <!--
-    <div class="top-bar">
+  <header id="header">
+    <nav class="top-nav">
       <div class="container">
         <ul class="contacto">
-          <li><a href="#footer"><i class="fas fa-map-marker-alt"></i>Av. Cordillera 181, Quilicura, Santiago</a></li>
-          <li><a href="tel:+56227392900"><i class="fas fa-phone"></i>(+56) 2 2739 2900</a></li>
-          <li><a href="mailto:info@remateskozak.cl"><i class="fas fa-at"></i>info@remateskozak.cl</a></li>
+          <li><a href="#footer"><i class="fas fa-map-marker-alt"></i><span>Av. Cordillera 181, Quilicura, Santiago</span></a></li>
+          <li><a href="tel:+56227392900"><i class="fas fa-phone"></i><span>(+56) 2 2739 2900</span></a></li>
+          <li><a href="mailto:info@remateskozak.cl"><i class="fas fa-at"></i><span>info@remateskozak.cl</span></a></li>
         </ul>
         <ul class="redes-sociales">
           <li><a href="https://web.facebook.com/remateskzk/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -30,33 +33,44 @@
           <li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
         </ul>
       </div>
-    </div> --> <!-- .top-bar -->
+    </nav> <!-- .top-nav -->
 
-  	<div class="logo"><a href="#0"><img src="img/logo.png" alt="Logo"></a></div>
+    <div class="container">
+    	<nav class="main-nav">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+    		<a href="#navigation" class="nav-trigger">
+    			<span>
+    				<em aria-hidden="true"></em>
+    				Menú
+    			</span>
+    		</a> <!-- .nav-trigger -->
 
-  	<nav class="primary-nav">
-  		<a href="#navigation" class="nav-trigger">
-  			<span>
-  				<em aria-hidden="true"></em>
-  				Menu
-  			</span>
-  		</a> <!-- .nav-trigger -->
+    		<ul class="navigation">
+    			<li><a href="index.html">Inicio</a></li>
+    			<li><a href="#">Noticias</a></li>
+    			<li><a href="#">Remates online</a></li>
+    			<li><a href="#">Venta directa</a></li>
+    			<li><a href="#">Contacto</a></li>
+          <li><a href="#"><i class="fas fa-search"></i></a></li>
+    		</ul>
+  	  </nav> <!-- .main-nav -->
 
-  		<ul class="navigation">
-  			<li><a href="#">Inicio</a></li>
-  			<li><a href="#">Noticias</a></li>
-  			<li><a href="#">Remates online</a></li>
-  			<li><a href="#">Venta directa</a></li>
-  			<li><a href="#">Contacto</a></li>
-        <li><a href="#"><i class="fas fa-search"></i></a></li>
-  		</ul>
-  	</nav> <!-- .primary-nav -->
+      <nav class="secondary-nav">
+      	<ul>
+      		<li><a class="active" href="#">Vehículos</a></li>
+      		<li><a href="#">Inmuebles</a></li>
+      		<li><a href="#">Maquinaria</a></li>
+      		<li><a href="#">Equipos</a></li>
+      		<li><a href="#">Electrodomésticos</a></li>
+      	</ul>
+      </nav> <!-- .secondary-nav -->
+    </div>
 
-  </header> <!-- .auto-hide-header -->
+  </header> <!-- #header -->
 
   <main class="main-content">
     <div class="container">
-      <section class="producto">
+      <section class="item">
         <div class="fotos">
           <div class="main">
             <img src="img/1.jpg">
@@ -76,16 +90,51 @@
           <span>Excepteur</span>
           <span>DSX-1023</span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <button type="button" name="comprar">Comprar</button>
         </div>
       </section>
-    </div>
+
+      <section class="productos-similares">
+        <h4>Ver más productos similares</h4>
+        <div class="owl-carousel">
+    			<a href="product.html">
+    				<div class="producto">
+    					<span>Producto 1</span>
+    				</div>
+    			</a>
+    			<a href="product.html">
+    				<div class="producto">
+    					<span>Producto 2</span>
+    				</div>
+    			</a>
+    			<a href="product.html">
+    				<div class="producto">
+    					<span>Producto 3</span>
+    				</div>
+    			</a>
+    			<a href="product.html">
+    				<div class="producto">
+    					<span>Producto 4</span>
+    				</div>
+    			</a>
+    			<a href="product.html">
+    				<div class="producto">
+    					<span>Producto 5</span>
+    				</div>
+    			</a>
+    		</div>
+      </section>
+    </div> <!-- .container -->
   </main>
 
   <footer id="footer">
-    <div class="container">
+    <div class="container main">
       <nav class="navegacion">
         <ul>
           <li><a href="#">Inicio</a></li>
@@ -121,10 +170,19 @@
           <li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
         </ul>
       </nav>
+    </div> <!-- container -->
+    <div class="bottom-bar">
+      <div class="container">
+        <span>&copy Todos los derechos reservados</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
     </div>
+
   </footer>
 
   <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+  <script src="js/owl.carousel.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
+  <script src="js/product.js" charset="utf-8"></script>
 </body>
 </html>
