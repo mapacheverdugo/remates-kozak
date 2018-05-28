@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var carruselProductos = $('main .owl-carousel');
   carruselProductos.owlCarousel({
-      items: 4,
+      items: 5,
       loop: true,
       navigation: true,
       autoplay: true,

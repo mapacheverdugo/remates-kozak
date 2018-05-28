@@ -21,6 +21,7 @@ a {
 
 #header .top-nav {
   background: #212121;
+  padding: 0 20px;
 }
 
 #header .top-nav .container {
@@ -31,7 +32,6 @@ a {
   justify-content: space-between;
   align-items: center;
   min-height: 30px;
-  margin: 0 20px;
 }
 
 #header .top-nav span {
@@ -71,6 +71,7 @@ a {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0 20px;
 }
 
 #header .main-nav .logo a {
@@ -106,7 +107,6 @@ a {
   /* vertically align its content */
   display: table;
   height: 100%;
-  padding: 0 1em;
   font-size: 0.8rem;
   text-transform: uppercase;
   color: #212121;

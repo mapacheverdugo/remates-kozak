@@ -12,8 +12,161 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/hover.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/product.css">
+  <!-- <link rel="stylesheet" href="css/product.css"> -->
+
+  <style media="screen">
+  main {
+    background: #eee;
+    padding: 40px 0;
+  }
+
+  main .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  main .item {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  main .item .fotos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .item .fotos .main img {
+    width: 100%;
+  }
+
+  main .item .fotos .all img {
+    width: 100px;
+  }
+
+  main .item .info {
+    width: 50%;
+    padding: 30px 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: space-between;
+  }
+
+  main .item .info .marca {
+    display: block;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #444;
+  }
+
+  main .item .info button {
+    border: none;
+    background: green;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 15px 30px;
+  }
+
+  main .detalles {
+    background: #fff;
+    margin-bottom: 20px;
+  }
+
+  main .detalles header {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  main .detalles header label {
+    display: flex;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  main .detalles header label input {
+    display: none;
+  }
+
+  main .detalles header label span {
+    display: inline-block;
+    padding: 30px;
+    text-transform: uppercase;
+  }
+
+  main .detalles header input:checked + span {
+    background: #f2f2f2;
+  }
+
+  main .detalles .main {
+    padding: 20px;
+  }
+
+  main .productos-similares h4 {
+    font-size: 20px;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 5px;
+  }
+
+
+  main .productos-similares .producto {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  main .productos-similares .producto a {
+    text-decoration: none;
+    color: #212121;
+  }
+
+  main .productos-similares .producto a:hover {
+    text-decoration: underline;
+  }
+
+  main .productos-similares .producto .foto {
+    width: 100%;
+    height: 200px;
+    background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s--eF3mI-fo--/c_scale,f_auto,fl_progressive,q_80,w_800/myw07z6aousnse5kbjvy.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  main .productos-similares .producto .informacion {
+    padding: 20px;
+  }
+
+  main .productos-similares .producto .marca {
+    display: block;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #444;
+  }
+
+
+  </style>
 
   <title>Producto XS23 | Automoviles en Remates Kozak</title>
 </head>
@@ -51,7 +204,9 @@
     			<li><a href="#">Remates online</a></li>
     			<li><a href="#">Venta directa</a></li>
     			<li><a href="#">Contacto</a></li>
-          <li><a href="#"><i class="fas fa-search"></i></a></li>
+          <li>
+
+          </li>
     		</ul>
   	  </nav> <!-- .main-nav -->
 
@@ -68,7 +223,7 @@
 
   </header> <!-- #header -->
 
-  <main class="main-content">
+  <main>
     <div class="container">
       <section class="item">
         <div class="fotos">
@@ -85,7 +240,7 @@
           </div>
         </div>
         <div class="info">
-          <h2>Automoviles</h2>
+          <a href="shop.html" class="marca"><h2>Mazda</h2></a>
           <h1>Sunt in culpa qui 8.000 KMS</h1>
           <span>Excepteur</span>
           <span>DSX-1023</span>
@@ -100,34 +255,66 @@
         </div>
       </section>
 
+      <section class="detalles">
+        <header>
+          <label>
+            <input type="radio" name="pestania" checked>
+            <span>Especificaciones</span>
+          </label>
+          <label>
+            <input type="radio" name="pestania">
+            <span>Información</span>
+          </label>
+          <label>
+            <input type="radio" name="pestania">
+            <span>Garantía</span>
+          </label>
+        </header>
+        <div class="main">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </section>
+
       <section class="productos-similares">
         <h4>Ver más productos similares</h4>
         <div class="owl-carousel">
-    			<a href="product.html">
-    				<div class="producto">
-    					<span>Producto 1</span>
-    				</div>
-    			</a>
-    			<a href="product.html">
-    				<div class="producto">
-    					<span>Producto 2</span>
-    				</div>
-    			</a>
-    			<a href="product.html">
-    				<div class="producto">
-    					<span>Producto 3</span>
-    				</div>
-    			</a>
-    			<a href="product.html">
-    				<div class="producto">
-    					<span>Producto 4</span>
-    				</div>
-    			</a>
-    			<a href="product.html">
-    				<div class="producto">
-    					<span>Producto 5</span>
-    				</div>
-    			</a>
+          <div class="producto">
+            <a href="product.html"><div class="foto hvr-grow"></div></a>
+            <div class="informacion">
+              <a href="#" class="marca">Mazda</span>
+              <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+            </div>
+          </div>
+          <div class="producto">
+            <a href="product.html"><div class="foto hvr-grow"></div></a>
+            <div class="informacion">
+              <a href="#" class="marca">Mazda</span>
+              <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+            </div>
+          </div>
+          <div class="producto">
+            <a href="product.html"><div class="foto hvr-grow"></div></a>
+            <div class="informacion">
+              <a href="#" class="marca">Mazda</span>
+              <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+            </div>
+          </div>
+          <div class="producto">
+            <a href="product.html"><div class="foto hvr-grow"></div></a>
+            <div class="informacion">
+              <a href="#" class="marca">Mazda</span>
+              <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+            </div>
+          </div>
+          <div class="producto">
+            <a href="product.html"><div class="foto hvr-grow"></div></a>
+            <div class="informacion">
+              <a href="#" class="marca">Mazda</span>
+              <a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
+            </div>
+          </div>
     		</div>
       </section>
     </div> <!-- .container -->
