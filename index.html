@@ -14,6 +14,81 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/index.css">
 
+	<style media="screen">
+		#header .banner {
+			width: 100%;
+			height: 500px;
+			overflow: hidden;
+		}
+
+		#header .banner .overlay {
+			position: absolute;
+			top: 123px;
+			background: rgba(0, 0, 0, .6);
+			width: 100%;
+			height: 500px;
+			z-index: 1;
+		}
+
+		#header .banner .imagen {
+			width: 100%;
+			height: 500px;
+			background-image: url('img/banner.jpg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		#header .banner .content {
+			position: absolute;
+			width: 100%;
+			height: 500px;
+			top: 123px;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+		}
+
+		#header .banner .content h2 {
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #fff;
+			font-size: 2em;
+		}
+
+		#header .banner .content p {
+			padding: 20px;
+			color: #fff;
+			font-size: 1.5em;
+		}
+
+		#header .banner .content span {
+			color: #fff;
+			font-size: 1em;
+			padding: 5px;
+		}
+
+		#header .banner .content button {
+			background: transparent;
+			padding: 15px 30px;
+			text-transform: uppercase;
+			color: #fff;
+			margin: 5px;
+			margin-top: 20px;
+			border: 2px solid #fff;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		#header .banner .content button:hover {
+			background: #fff;
+			color: #212121;
+		}
+
+	</style>
+
 	<title>Inicio | Remates Kozak</title>
 </head>
 <body>
@@ -31,7 +106,7 @@
 					<li><a href="https://www.instagram.com/remateskozak/" class="instagram"><i class="fab fa-instagram"></i></a></li>
 					<li><a href="#" class="google"><i class="fab fa-google-plus-g"></i></a></li>
 				</ul>
-			</div>
+			</div> <!-- .container -->
 		</nav> <!-- .top-nav -->
 
 		<div class="container">
@@ -53,7 +128,26 @@
 					<li><a href="#"><i class="fas fa-search"></i></a></li>
 				</ul>
 			</nav> <!-- .main-nav -->
+		</div> <!-- .container -->
 
+		<div class="banner">
+			<div class="imagen"></div>
+			<div class="content">
+				<h2>Próximamente</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<span><i class="far fa-clock"></i> Miércoles a las 12:30</span>
+				<span><i class="fas fa-map-marker-alt"></i> Quilicura, Santiago</span>
+				<div class="botones">
+					<button type="button">Saber más</button>
+					<button type="button">Registrarse</button>
+				</div>
+			</div>  <!-- .content -->
+
+
+			<div class="overlay"></div>
+		</div> <!-- .banner -->
+
+		<div class="container">
 			<nav class="secondary-nav">
 				<ul>
 					<li><a class="active" href="#">Vehículos</a></li>
@@ -63,7 +157,7 @@
 					<li><a href="#">Electrodomésticos</a></li>
 				</ul>
 			</nav> <!-- .secondary-nav -->
-		</div>
+		</div> <!-- .container -->
 
 	</header> <!-- #header -->
 
