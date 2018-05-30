@@ -1,12 +1,12 @@
 $(document).ready(function($){
 	//set your google maps parameters
-	var latitude = 51.5255069,
-		longitude = -0.0836207,
-		map_zoom = 14;
+	var latitude = -33.377172,
+		longitude = -70.751443,
+		map_zoom = 15;
 
 	//google map custom marker icon - .png fallback for IE11
 	var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-	var marker_url = ( is_internetExplorer11 ) ? 'img/cd-icon-location.png' : 'img/cd-icon-location.svg';
+	var marker_url = ( is_internetExplorer11 ) ? 'img/icon-location.png' : 'img/icon-location.svg';
 
 	//define the basic color of your map, plus a value for saturation and brightness
 	var	main_color = '#2d313f',
@@ -189,7 +189,6 @@ $(document).ready(function($){
       	center: new google.maps.LatLng(latitude, longitude),
       	zoom: map_zoom,
       	panControl: false,
-      	zoomControl: false,
       	mapTypeControl: false,
       	streetViewControl: false,
       	mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -197,7 +196,7 @@ $(document).ready(function($){
       	styles: style,
     }
     //inizialize the map
-	var map = new google.maps.Map(document.getElementById('google-container'), map_options);
+	var map = new google.maps.Map(document.getElementById('ubicacion'), map_options);
 	//add a custom marker to the map
 	var marker = new google.maps.Marker({
 	  	position: new google.maps.LatLng(latitude, longitude),
@@ -209,8 +208,8 @@ $(document).ready(function($){
 	//add custom buttons for the zoom-in/zoom-out on the map
 	function CustomZoomControl(controlDiv, map) {
 		//grap the zoom elements from the DOM and insert them in the map
-	  	var controlUIzoomIn= document.getElementById('cd-zoom-in'),
-	  		controlUIzoomOut= document.getElementById('cd-zoom-out');
+	  	var controlUIzoomIn= document.getElementById('zoom-in'),
+	  		controlUIzoomOut= document.getElementById('zoom-out');
 	  	controlDiv.appendChild(controlUIzoomIn);
 	  	controlDiv.appendChild(controlUIzoomOut);
 

@@ -26,89 +26,30 @@
     }
 
     main .principal {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-items: flex-start;
-
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-gap: 10px;
     }
 
     main .principal .filtros {
-      display: none;
       background: #fff;
       padding: 20px;
-      min-width: 300px;
-      min-width: 40%;
-      flex-basis: auto;
-      margin-right: 20px;
-    }
-
-    @media only screen and (max-width: 600px) {
-      main .principal .filtros {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-
-      main .principal {
-        flex-wrap: wrap;
-      }
-    }
-
-    @media only screen and (min-width: 900px) {
-      main .principal .filtros {
-        min-width: 30%;
-        flex-basis: auto;
-      }
-      main .principal .lista-productos {
-        min-width: 70%;
-        flex-basis: auto;
-      }
-    }
-
-    @media only screen and (min-width: 900px) {
-      main .principal .filtros {
-        min-width: 20%;
-        flex-basis: auto;
-      }
-      main .principal .lista-productos {
-        min-width: 80%;
-        flex-basis: auto;
-      }
     }
 
     main .principal .filtros .content {
-      background: #fafafa;
       width: 100%;
       height: 500px;
-    }
-
-    @media only screen and (min-width: 1028px) {
-      main .principal .filtros {
-        display: block;
-        background: #fff;
-        padding: 20px;
-        min-width: 300px;
-        min-width: 30%;
-        flex-basis: auto;
-        margin-right: 20px;
-      }
     }
 
     main .principal .lista-productos {
       overflow: hidden;
       min-width: 60%;
-      flex-basis: auto;
-      margin-right: -20px;
     }
 
     main .principal .lista-productos ul {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-items: stretch;
-      margin-right: -20px;
-      margin-bottom: -20px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: auto auto;
       overflow: hidden;
       width: 100%;
     }
@@ -118,8 +59,6 @@
       min-width: calc(100% / 4);
       flex-grow: 1;
       flex-shrink: 1;
-      margin-right: 20px;
-      margin-bottom: 20px;
     }
 
     main .principal .lista-productos ul li .producto {
@@ -159,6 +98,29 @@
       font-size: 0.8em;
       font-weight: bold;
       color: #444;
+    }
+
+    /*
+    @media only screen and (min-width: 480px) {
+      main .principal .lista-productos ul {
+        grid-template-columns: auto auto auto auto;
+      }
+    }*/
+
+    @media only screen and (min-width: 768px) {
+      main .principal {
+        grid-template-columns: 300px auto;
+      }
+
+      main .principal .lista-productos ul {
+        grid-template-columns: auto auto;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      main .principal .lista-productos ul {
+        grid-template-columns: auto auto auto auto;
+      }
     }
 
   </style>
@@ -222,10 +184,10 @@
         <aside class="filtros">
           <form>
             <fieldset>
-              <legend>Categoria:</legend>
+              <legend>Categoria</legend>
               <label>
                 <input type="checkbox" name="categoria">
-                Categorias
+                <span>Categorias</span>
               </label>
               <label>
                 <input type="checkbox" name="categoria">
@@ -433,8 +395,8 @@
     </div> <!-- container -->
     <div class="bottom-bar">
       <div class="container">
-        <span>&copy Todos los derechos reservados</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <span>Remates Kozak &copy Todos los derechos reservados</span>
+        <span>Diseñado por<a href="https://github.com/mapacheverdugo">Jorge Verdugo</a></span>
       </div>
     </div>
 

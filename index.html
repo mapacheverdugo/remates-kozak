@@ -87,6 +87,45 @@
 			color: #212121;
 		}
 
+		main .productos-destacados .producto {
+			background: #fff;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		main .productos-destacados .producto a {
+			text-decoration: none;
+			color: #212121;
+		}
+
+		main .productos-destacados .producto a:hover {
+			text-decoration: underline;
+		}
+
+		main .productos-destacados .producto .foto {
+			width: 100%;
+			height: 200px;
+			background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s--eF3mI-fo--/c_scale,f_auto,fl_progressive,q_80,w_800/myw07z6aousnse5kbjvy.jpg');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border: none;
+		}
+
+		main .productos-destacados .producto .informacion {
+			padding: 20px;
+		}
+
+		main .productos-destacados .producto .marca {
+			display: block;
+			padding: 10px 0;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			font-weight: bold;
+			color: #444;
+		}
+
 	</style>
 
 	<title>Inicio | Remates Kozak</title>
@@ -162,54 +201,50 @@
 	</header> <!-- #header -->
 
 <main>
-	<section class="productos">
-		<form class="filtro">
-			<input type="radio" name="filtro" value="automoviles" id="filtro1">
-			<label for="filtro1">Vehículos</label>
-
-			<input type="radio" name="filtro" value="automoviles" id="filtro2">
-			<label for="filtro2">Inmuebles</label>
-
-			<input type="radio" name="filtro" value="automoviles" id="filtro3">
-			<label for="filtro3">Maquinaria</label>
-
-			<input type="radio" name="filtro" value="automoviles" id="filtro4">
-			<label for="filtro4">Equipos</label>
-
-			<input type="radio" name="filtro" value="automoviles" id="filtro5">
-			<label for="filtro5">Electrodomésticos</label>
-		</form>
+	<section class="productos-destacados">
+		<h4>Destacados de la semana</h4>
 		<div class="owl-carousel">
-			<a href="product.html">
-				<div class="producto">
-					<span>Producto 1</span>
+			<div class="producto">
+				<a href="product.html"><div class="foto hvr-grow"></div></a>
+				<div class="informacion">
+					<a href="#" class="marca">Mazda</span>
+					<a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
 				</div>
-			</a>
-			<a href="product.html">
-				<div class="producto">
-					<span>Producto 2</span>
+			</div>
+			<div class="producto">
+				<a href="product.html"><div class="foto hvr-grow"></div></a>
+				<div class="informacion">
+					<a href="#" class="marca">Mazda</span>
+					<a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
 				</div>
-			</a>
-			<a href="product.html">
-				<div class="producto">
-					<span>Producto 3</span>
+			</div>
+			<div class="producto">
+				<a href="product.html"><div class="foto hvr-grow"></div></a>
+				<div class="informacion">
+					<a href="#" class="marca">Mazda</span>
+					<a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
 				</div>
-			</a>
-			<a href="product.html">
-				<div class="producto">
-					<span>Producto 4</span>
+			</div>
+			<div class="producto">
+				<a href="product.html"><div class="foto hvr-grow"></div></a>
+				<div class="informacion">
+					<a href="#" class="marca">Mazda</span>
+					<a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
 				</div>
-			</a>
-			<a href="product.html">
-				<div class="producto">
-					<span>Producto 5</span>
+			</div>
+			<div class="producto">
+				<a href="product.html"><div class="foto hvr-grow"></div></a>
+				<div class="informacion">
+					<a href="#" class="marca">Mazda</span>
+					<a href="product.html" class="nombre">Lorem ipsum XDA 200</a>
 				</div>
-			</a>
+			</div>
 		</div>
 	</section>
 </main> <!-- .main-content -->
 
 <footer id="footer">
+	<section id="ubicacion" style="width: 100%; height: 400px;"></section>
 	<div class="container main">
 		<nav class="navegacion">
 			<ul>
@@ -249,16 +284,18 @@
 	</div> <!-- container -->
 	<div class="bottom-bar">
 		<div class="container">
-			<span>&copy Todos los derechos reservados</span>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<span>Remates Kozak &copy Todos los derechos reservados</span>
+			<span>Diseñado por<a href="https://github.com/mapacheverdugo">Jorge Verdugo</a></span>
 		</div>
 	</div>
 
 </footer>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5JVDiGM_bhXQDr9nCoFozr_5nbjUiXVY"></script>
 <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
 <script src="js/owl.carousel.min.js" charset="utf-8"></script>
 <script src="js/main.js" charset="utf-8"></script>
 <script src="js/index.js" charset="utf-8"></script>
+<script src="js/map.js" charset="utf-8"></script>
 </body>
 </html>
