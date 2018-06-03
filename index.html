@@ -16,6 +16,7 @@
 
 	<style media="screen">
 		#header .banner {
+			position: relative;
 			width: 100%;
 			height: 500px;
 			overflow: hidden;
@@ -23,16 +24,16 @@
 
 		#header .banner .overlay {
 			position: absolute;
-			top: 123px;
+			top: 0;
 			background: rgba(0, 0, 0, .6);
 			width: 100%;
-			height: 500px;
+			height: 100%;
 			z-index: 1;
 		}
 
 		#header .banner .imagen {
 			width: 100%;
-			height: 500px;
+			height: 100%;
 			background-image: url('img/banner.jpg');
 			background-position: center;
 			background-repeat: no-repeat;
@@ -42,8 +43,8 @@
 		#header .banner .content {
 			position: absolute;
 			width: 100%;
-			height: 500px;
-			top: 123px;
+			height: 100%;
+			top: 0;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: center;
@@ -59,6 +60,7 @@
 		}
 
 		#header .banner .content p {
+			text-align: center;
 			padding: 20px;
 			color: #fff;
 			font-size: 1.5em;
@@ -70,13 +72,22 @@
 			padding: 5px;
 		}
 
+		#header .banner .content .botones {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: center;
+			flex-flow: row wrap;
+			align-items: center;
+			margin-top: 20px;
+		}
+
 		#header .banner .content button {
 			background: transparent;
 			padding: 15px 30px;
 			text-transform: uppercase;
 			color: #fff;
 			margin: 5px;
-			margin-top: 20px;
 			border: 2px solid #fff;
 			font-weight: bold;
 			cursor: pointer;
@@ -118,7 +129,7 @@
 		}
 
 		main .productos-destacados .producto .marca {
-			display: block;
+			display: inline-block;
 			padding: 10px 0;
 			text-transform: uppercase;
 			font-size: 0.8em;
@@ -181,15 +192,13 @@
 					<button type="button">Registrarse</button>
 				</div>
 			</div>  <!-- .content -->
-
-
 			<div class="overlay"></div>
 		</div> <!-- .banner -->
 
 		<div class="container">
 			<nav class="secondary-nav">
 				<ul>
-					<li><a class="active" href="#">Vehículos</a></li>
+					<li><a href="#">Vehículos</a></li>
 					<li><a href="#">Inmuebles</a></li>
 					<li><a href="#">Maquinaria</a></li>
 					<li><a href="#">Equipos</a></li>
